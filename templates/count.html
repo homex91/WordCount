@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>HELLO COUNTS in count</h1>
+
+    <a href="{% url 'home' %}">Start Again</a>
+    <p>This is the full text:</p>
+    {{ fulltext }}
+    <p>It has {{ wordlist }} words in it and {{ textLen }} characters</p>
+
+    {% for word, count in wordict %}
+          {{ word }} -----------------  {{ count }} <br/>
+    {% endfor %}
+  </body>
+</html>
